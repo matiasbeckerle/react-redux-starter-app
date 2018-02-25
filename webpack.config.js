@@ -3,7 +3,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: './app/index.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    './app/index.jsx'
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -34,6 +37,7 @@ const config = {
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development'
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({ template: './app/index.html' })
   ]
 };

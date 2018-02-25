@@ -9,7 +9,7 @@ export class LoginPage extends React.Component {
   render() {
     return (
       <section>
-        <h2>Login</h2>
+        <h1>Login</h1>
         <LoginForm />
       </section>
     );

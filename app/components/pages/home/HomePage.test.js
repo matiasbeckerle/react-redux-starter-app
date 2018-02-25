@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Main from './Main';
+import HomePage from './HomePage';
 
 function setup(props) {
-  return shallow(<Main {...props} />);
+  return shallow(<HomePage {...props} />);
 }
 
-test('<Main /> renders', () => {
+test('<HomePage /> renders', () => {
   const wrapper = setup();
   expect(wrapper.find('h1')).toHaveLength(1);
 });

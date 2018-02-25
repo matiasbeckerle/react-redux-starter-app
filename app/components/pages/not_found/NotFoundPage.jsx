@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NotFoundPage = () => {
   return (
     <section>
-      <h2>Page not found</h2>
+      <h1>Page not found</h1>
       <Link to="/">Go back to home</Link>
     </section>
   );
