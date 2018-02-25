@@ -9,7 +9,8 @@ const config = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -30,8 +31,9 @@ const config = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development'
+    }),
     new HtmlWebpackPlugin({ template: './app/index.html' })
   ]
 };
