@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <h1>React+Redux</h1>
@@ -8,4 +8,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Main;
