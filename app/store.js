@@ -5,12 +5,6 @@ import rootReducer from './reducers/root';
 
 export const history = createHistory();
 const middleware = routerMiddleware(history);
-const store = createStore(rootReducer, applyMiddleware(middleware));
-if (module.hot) {
-  module.hot.accept('./reducers/root', () => {
-    const nextReducer = require('./reducers/root').default;
-    store.replaceReducer(nextReducer);
-  });
-}
 
+const store = createStore(rootReducer, applyMiddleware(middleware));
 export default store;

@@ -3,10 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: [
-    'react-hot-loader/patch',
-    './app/index.jsx'
-  ],
+  entry: './app/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
