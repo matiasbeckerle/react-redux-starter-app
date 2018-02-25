@@ -4,7 +4,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import Main from './Main';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     const { store, history } = this.props;
     return (
@@ -21,3 +21,5 @@ App.propTypes = {
   store: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired
 };
+
+export default App;
