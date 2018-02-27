@@ -6,7 +6,9 @@ function setup(props) {
   return shallow(<NotFoundPage {...props} />);
 }
 
-test('<NotFoundPage /> renders', () => {
+const component = '<NotFoundPage />';
+
+test(`${component} renders`, () => {
   const wrapper = setup();
   expect(wrapper.find('h1')).toHaveLength(1);
 });
