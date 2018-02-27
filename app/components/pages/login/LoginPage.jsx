@@ -6,11 +6,21 @@ import * as actions from '../../../actions/authActions';
 import LoginForm from './LoginForm';
 
 export class LoginPage extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+  }
+
+  handleOnSubmit(username, password) {
+    console.log('handleOnSubmit', username, password);
+  }
+
   render() {
     return (
       <section>
         <h1>Login</h1>
-        <LoginForm />
+        <LoginForm onSubmit={this.handleOnSubmit} />
       </section>
     );
   }
