@@ -1,16 +1,6 @@
 # React+Redux starter app
 
-## Installation
-
-```bash
-npm install
-```
-
-## Run
-
-```bash
-npm start
-```
+Boilerplate application containing the minimum set of frameworks/libraries/technologies to start working with React and Redux.
 
 ## Motivation
 
@@ -35,3 +25,15 @@ Tech | Insights
 [Sinon.JS](http://sinonjs.org/) | Testing utilities (spies, stubs and mocks).
 [ESLint](https://eslint.org/) | Linting utility.
 [EditorConfig](http://editorconfig.org/) | Define file formats and coding styles for all Editors/IDEs.
+
+## Installation
+
+```bash
+npm install
+```
+
+## Run
+
+```bash
+npm start
+```
