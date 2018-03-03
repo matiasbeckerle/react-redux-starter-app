@@ -1,6 +1,6 @@
 # React+Redux starter app
 
-Boilerplate application containing the minimum set of frameworks/libraries/technologies to start working with React and Redux.
+Boilerplate application containing the minimum set of frameworks/libraries/technologies to start working with [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
 
 ## Motivation
 
