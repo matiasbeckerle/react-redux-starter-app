@@ -13,7 +13,7 @@ export class LoginPage extends React.Component {
   }
 
   handleOnSubmit(username, password) {
-    console.log('handleOnSubmit', username, password);
+    this.props.actions.login(username, password);
   }
 
   render() {

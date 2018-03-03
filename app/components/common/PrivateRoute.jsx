@@ -17,8 +17,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 PrivateRoute.propTypes = {
-  component: PropTypes.object, // TODO: Verify type.
-  location: PropTypes.object // TODO: Verify type.
+  component: PropTypes.func,
+  location: PropTypes.object
 };
 
 export default PrivateRoute;
