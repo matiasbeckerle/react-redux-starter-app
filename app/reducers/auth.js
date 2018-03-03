@@ -1,8 +1,37 @@
-function auth(state = {}, action) {
+import * as types from '../constants/actionTypes';
+import initialState from './initialState';
+
+function auth(state = initialState.auth, action) {
   switch (action.type) {
-    case 'LOGIN':
-      // TODO: Do something.
-      return state;
+    case types.LOGIN_REQUEST:
+      return Object.assign({}, state,
+        {
+          authenticating: true,
+          error: false,
+          errorMessage: null
+        }
+      );
+
+    case types.LOGIN_SUCCESS:
+      console.log('LOGIN_SUCCESS', state, action);
+      return Object.assign({}, state,
+        {
+          authenticating: false,
+          error: false,
+          errorMessage: null,
+          user: action.user
+        }
+      );
+
+    case types.LOGIN_ERROR:
+      return Object.assign({}, state,
+        {
+          authenticating: false,
+          error: true,
+          errorMessage: action.message
+        }
+      );
+
     default:
       return state;
   }
