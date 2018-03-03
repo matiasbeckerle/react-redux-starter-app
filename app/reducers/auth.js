@@ -13,7 +13,6 @@ function auth(state = initialState.auth, action) {
       );
 
     case types.LOGIN_SUCCESS:
-      console.log('LOGIN_SUCCESS', state, action);
       return Object.assign({}, state,
         {
           authenticating: false,
