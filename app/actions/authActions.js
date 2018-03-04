@@ -1,6 +1,5 @@
 import * as types from '../constants/actionTypes';
 import * as authService from '../services/authService';
-import { history } from '../store';
 
 export function loginRequest() {
   return {
@@ -29,7 +28,6 @@ export function login(username, password) {
       .then(
         response => dispatch(loginSuccess(response)),
         error => dispatch(loginError(error))
-      )
-      .then(history.push('/'));
+      );
   };
 }

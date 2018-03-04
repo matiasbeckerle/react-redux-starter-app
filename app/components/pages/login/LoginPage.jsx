@@ -19,7 +19,8 @@ export class LoginPage extends React.Component {
   render() {
     return (
       <section>
-        <h1>Login</h1>
+        <h1>React+Redux starter app</h1>
+        <h2>Login</h2>
         <LoginForm onSubmit={this.handleOnSubmit} />
       </section>
     );
