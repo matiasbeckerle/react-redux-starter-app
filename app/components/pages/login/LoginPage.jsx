@@ -32,8 +32,7 @@ LoginPage.propTypes = {
 };
 
 function mapStateToProps(state) {
-  return {
-  };
+  return state;
 }
 
 function mapDispatchToProps(dispatch) {
