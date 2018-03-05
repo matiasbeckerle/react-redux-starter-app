@@ -28,6 +28,12 @@
       "error",
       "unix"
     ],
+    "no-console": [
+      1
+    ],
+    "no-unused-vars": [
+      "warn"
+    ],
     "quotes": [
       "error",
       "single",
@@ -38,9 +44,6 @@
     "semi": [
       "error",
       "always"
-    ],
-    "no-console": [
-      1
     ]
   }
 }

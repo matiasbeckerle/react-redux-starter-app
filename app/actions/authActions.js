@@ -1,3 +1,4 @@
+import { push } from 'react-router-redux';
 import * as types from '../constants/actionTypes';
 import * as authService from '../services/authService';
 
@@ -26,7 +27,10 @@ export function login(username, password) {
     dispatch(loginRequest());
     return authService.login(username, password)
       .then(
-        response => dispatch(loginSuccess(response)),
+        response => {
+          dispatch(loginSuccess(response));
+          dispatch(push('/'));
+        },
         error => dispatch(loginError(error))
       );
   };

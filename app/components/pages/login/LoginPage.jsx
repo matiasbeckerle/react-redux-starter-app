@@ -33,7 +33,6 @@ LoginPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    state // TODO
   };
 }
 
