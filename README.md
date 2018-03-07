@@ -37,3 +37,12 @@ npm install
 ```bash
 npm start
 ```
+
+## Alternatives
+
+There is a big chance this project does not fulfill your needs. We recommend these fantastic alternatives:
+
+1. [Create React App](https://github.com/facebook/create-react-app)
+2. [react slingshot](https://github.com/coryhouse/react-slingshot)
+
+Both of them have been here for some time and have very nice communities and support. Please, chech those out!
