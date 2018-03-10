@@ -17,9 +17,9 @@ export class Main extends React.Component {
   render() {
     return (
       <Switch>
-        <PrivateRoute exact path="/" component={HomePage} user={this.props.user}></PrivateRoute>
-        <Route path="/login" component={LoginPage}></Route>
-        <Route component={NotFoundPage}></Route>
+        <PrivateRoute exact path="/" component={HomePage} isAuthenticated={this.props.isAuthenticated} />
+        <Route path="/login" component={LoginPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     );
   }
@@ -27,12 +27,12 @@ export class Main extends React.Component {
 
 Main.propTypes = {
   actions: PropTypes.object.isRequired,
-  user: PropTypes.object
+  isAuthenticated: PropTypes.bool
 };
 
 function mapStateToProps(state) {
   return {
-    user: state.auth.user
+    isAuthenticated: state.auth.isAuthenticated
   };
 }
 

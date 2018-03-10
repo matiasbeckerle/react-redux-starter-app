@@ -7,6 +7,7 @@ function auth(state = initialState.auth, action) {
       return Object.assign({}, state,
         {
           authenticating: true,
+          isAuthenticated: false,
           error: false,
           errorMessage: null
         }
@@ -16,6 +17,7 @@ function auth(state = initialState.auth, action) {
       return Object.assign({}, state,
         {
           authenticating: false,
+          isAuthenticated: true,
           error: false,
           errorMessage: null,
           user: action.user
@@ -26,6 +28,7 @@ function auth(state = initialState.auth, action) {
       return Object.assign({}, state,
         {
           authenticating: false,
+          isAuthenticated: false,
           error: true,
           errorMessage: action.message
         }

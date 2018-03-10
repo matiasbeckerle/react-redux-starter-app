@@ -9,6 +9,7 @@ describe('auth reducer', () => {
     // Assert.
     expect(result).toEqual({
       authenticating: false,
+      isAuthenticated: false,
       error: false,
       errorMessage: null,
       user: null
@@ -24,6 +25,7 @@ describe('auth reducer', () => {
     // Assert.
     expect(result).toEqual({
       authenticating: true,
+      isAuthenticated: false,
       error: false,
       errorMessage: null
     });
@@ -41,6 +43,7 @@ describe('auth reducer', () => {
     // Assert.
     expect(result).toEqual({
       authenticating: false,
+      isAuthenticated: true,
       error: false,
       errorMessage: null,
       user: {
@@ -59,6 +62,7 @@ describe('auth reducer', () => {
     // Assert.
     expect(result).toEqual({
       authenticating: false,
+      isAuthenticated: false,
       error: true,
       errorMessage: 'Unexpected error.'
     });
