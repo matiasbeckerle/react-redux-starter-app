@@ -3,8 +3,10 @@ import * as types from '../constants/actionTypes';
 
 describe('auth reducer', () => {
   it('should return the initial state', () => {
+    // Act.
     const result = reducer(undefined, {});
 
+    // Assert.
     expect(result).toEqual({
       authenticating: false,
       error: false,
@@ -14,10 +16,12 @@ describe('auth reducer', () => {
   });
 
   it('should handle a login request', () => {
+    // Act.
     const result = reducer([], {
       type: types.LOGIN_REQUEST
     });
 
+    // Assert.
     expect(result).toEqual({
       authenticating: true,
       error: false,
@@ -26,6 +30,7 @@ describe('auth reducer', () => {
   });
 
   it('should handle a successfully login', () => {
+    // Act.
     const result = reducer([], {
       type: types.LOGIN_SUCCESS,
       user: {
@@ -33,6 +38,7 @@ describe('auth reducer', () => {
       }
     });
 
+    // Assert.
     expect(result).toEqual({
       authenticating: false,
       error: false,
@@ -44,11 +50,13 @@ describe('auth reducer', () => {
   });
 
   it('should handle a failed login', () => {
+    // Act.
     const result = reducer([], {
       type: types.LOGIN_ERROR,
       message: 'Unexpected error.'
     });
 
+    // Assert.
     expect(result).toEqual({
       authenticating: false,
       error: true,

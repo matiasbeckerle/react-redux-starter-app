@@ -54,6 +54,7 @@ describe('authActions', () => {
   });
 
   it('should handle successful login when valid credentials provided', () => {
+    // Arrange.
     const username = 'username';
     const password = 'password';
     const user = {
@@ -66,6 +67,7 @@ describe('authActions', () => {
 
     // TODO: Mock service response.
 
+    // Act & assert.
     return store.dispatch(authActions.login(username, password)).then(() => {
       const actions = store.getActions();
       expect(actions[0]).toEqual({ type: types.LOGIN_REQUEST });
@@ -74,6 +76,7 @@ describe('authActions', () => {
   });
 
   it('should handle failed login when invalid credentials provided', () => {
+    // Arrange.
     const username = 'invalid';
     const password = 'invalid';
     const message = 'Invalid credentials.';
@@ -83,6 +86,7 @@ describe('authActions', () => {
 
     // TODO: Mock service response.
 
+    // Act & assert.
     return store.dispatch(authActions.login(username, password)).then(() => {
       const actions = store.getActions();
       expect(actions[0]).toEqual({ type: types.LOGIN_REQUEST });
