@@ -15,12 +15,23 @@ export class Main extends React.Component {
   }
 
   render() {
+    // TODO: Update to JSX fragments syntax once is offically supported by Enzyme and ESLint.
+    // https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html
+    // https://github.com/airbnb/enzyme/issues/1213
     return (
-      <Switch>
-        <PrivateRoute exact path="/" component={HomePage} isAuthenticated={this.props.isAuthenticated} />
-        <Route path="/login" component={LoginPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div>
+        <header key="header">
+          <h1>React+Redux starter app</h1>
+        </header>
+        <Switch key="section">
+          <PrivateRoute exact path="/" component={HomePage} isAuthenticated={this.props.isAuthenticated} />
+          <Route path="/login" component={LoginPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+        <footer key="footer">
+          <p>See this project @ <a href="https://github.com/MakingSense/react-redux-starter-app">GitHub</a></p>
+        </footer>
+      </div>
     );
   }
 }

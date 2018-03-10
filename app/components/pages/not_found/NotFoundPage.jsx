@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const NotFoundPage = () => {
   return (
     <section>
-      <h1>React+Redux starter app</h1>
       <h2>Page not found</h2>
       <Link to="/">Go back to home</Link>
     </section>

@@ -13,10 +13,6 @@ test(`${component} renders itself`, () => {
 
   expect(wrapper.find('section')).toHaveLength(1);
 
-  const title = wrapper.find('h1');
-  expect(title).toHaveLength(1);
-  expect(title.text()).toBe('React+Redux starter app');
-
   const subtitle = wrapper.find('h2');
   expect(subtitle).toHaveLength(1);
   expect(subtitle.text()).toBe('Home');
