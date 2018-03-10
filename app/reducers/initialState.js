@@ -3,9 +3,7 @@ export default {
     authenticating: false,
     error: false,
     errorMessage: null,
-    user: {
-      name: null
-    }
+    user: null
   },
   routing: null
 };
