@@ -20,15 +20,15 @@ export class Main extends React.Component {
     // https://github.com/airbnb/enzyme/issues/1213
     return (
       <div>
-        <header key="header">
+        <header>
           <h1>React+Redux starter app</h1>
         </header>
-        <Switch key="section">
+        <Switch>
           <PrivateRoute exact path="/" component={HomePage} isAuthenticated={this.props.isAuthenticated} />
           <Route path="/login" component={LoginPage} />
           <Route component={NotFoundPage} />
         </Switch>
-        <footer key="footer">
+        <footer>
           <p>See this project @ <a href="https://github.com/MakingSense/react-redux-starter-app">GitHub</a></p>
         </footer>
       </div>
