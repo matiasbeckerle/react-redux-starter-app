@@ -1,7 +1,21 @@
 {
-  "name": "react-redux-starter",
-  "version": "1.0.0",
+  "name": "react-redux-starter-app",
+  "version": "0.9.0",
   "description": "React+Redux",
+  "homepage": "https://github.com/MakingSense/react-redux-starter-app",
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "bugs": {
+    "url": "https://github.com/MakingSense/react-redux-starter-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakingSense/react-redux-starter-app.git"
+  },
+  "author": "Making Sense",
+  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --config webpack.config.js",
@@ -11,12 +25,6 @@
     "lint": "eslint --ext .js --ext .jsx ./app",
     "test": "jest"
   },
-  "keywords": [
-    "react",
-    "redux"
-  ],
-  "author": "Making Sense",
-  "license": "MIT",
   "dependencies": {
     "history": "4.7.2",
     "react": "16.2.0",
