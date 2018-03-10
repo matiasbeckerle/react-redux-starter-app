@@ -8,9 +8,12 @@ function setup(props) {
 
 const component = '<Main />';
 
-test(`${component} renders`, () => {
+test(`${component} renders itself`, () => {
   const wrapper = setup({
     actions: {}
   });
+
   expect(wrapper.find('Switch')).toHaveLength(1);
+  expect(wrapper.find('PrivateRoute')).toHaveLength(1);
+  expect(wrapper.find('Route')).toHaveLength(2);
 });

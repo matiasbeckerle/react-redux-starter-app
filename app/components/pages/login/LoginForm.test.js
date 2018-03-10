@@ -8,9 +8,10 @@ function setup(props) {
 
 const component = '<LoginForm />';
 
-test(`${component} renders`, () => {
+test(`${component} renders itself`, () => {
   const wrapper = setup({
     onSubmit: function () { }
   });
+
   expect(wrapper.find('form')).toHaveLength(1);
 });

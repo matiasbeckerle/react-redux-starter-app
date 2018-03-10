@@ -8,7 +8,7 @@ function setup(props) {
 
 const component = '<PrivateRoute />';
 
-test(`${component} renders`, () => {
+test(`${component} renders itself`, () => {
   const wrapper = setup();
   expect(wrapper.find('Route')).toHaveLength(1);
 });

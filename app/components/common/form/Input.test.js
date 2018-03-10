@@ -8,7 +8,7 @@ function setup(props) {
 
 const component = '<Input />';
 
-test(`${component} renders`, () => {
+test(`${component} renders itself`, () => {
   const wrapper = setup();
   expect(wrapper.find('input')).toHaveLength(1);
 });
