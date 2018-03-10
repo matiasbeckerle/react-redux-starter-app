@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions from '../../../actions/authActions';
+import * as authActions from '../../../actions/authActions';
 import LoginForm from './LoginForm';
 
 export class LoginPage extends React.Component {
@@ -36,7 +36,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(authActions, dispatch)
   };
 }
 
