@@ -8,6 +8,8 @@ import PrivateRoute from './common/PrivateRoute';
 import LoginPage from './pages/login/LoginPage';
 import NotFoundPage from './pages/not_found/NotFoundPage';
 import HomePage from './pages/home/HomePage';
+import Header from './pages/partials/header/Header';
+import Footer from './pages/partials/footer/Footer';
 
 export class Main extends React.Component {
   constructor(props, context) {
@@ -20,17 +22,13 @@ export class Main extends React.Component {
     // https://github.com/airbnb/enzyme/issues/1213
     return (
       <div>
-        <header>
-          <h1>React+Redux starter app</h1>
-        </header>
+        <Header />
         <Switch>
           <PrivateRoute exact path="/" component={HomePage} isAuthenticated={this.props.isAuthenticated} />
           <Route path="/login" component={LoginPage} />
           <Route component={NotFoundPage} />
         </Switch>
-        <footer>
-          <p>See this project @ <a href="https://github.com/MakingSense/react-redux-starter-app">GitHub</a></p>
-        </footer>
+        <Footer />
       </div>
     );
   }
